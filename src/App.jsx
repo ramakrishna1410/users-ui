@@ -11,12 +11,11 @@ function App() {
     <>
     <Navbar/>
     <Routes>
-      <Route path="/" element={<Dashboard/>} />
+      <Route path="/" element={<Login/>} />
+      <Route path="/dashboard" element={<Dashboard />} />
       <Route path="/users" element={<Users />} />
       <Route path="/users/add" element={<AddUser />} />
       <Route path="/users/edit/:id" element={<EditUser/>} />
-      <Route path="/login" element={<Login />}
-/>
     </Routes>
     </>
   )

@@ -4,7 +4,9 @@ function Navbar()
 {
     return (
         <nav>
-    <Link to="/">Dashboard</Link>
+    <Link to="/">Login</Link>
+    {"|"}
+    <Link to="/dashboard">Dashboard</Link>
     {"|"}
     <Link to="/users">Users</Link>
     {"|"}
