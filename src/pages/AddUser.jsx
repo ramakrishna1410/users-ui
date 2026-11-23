@@ -1,7 +1,9 @@
 import { useState } from "react";
 import { createUser } from "../services/userService";
+import { useNavigate } from "react-router-dom";
 
 function AddUser() {
+  const navigate = useNavigate();
   const [user, setUser] = useState({
     name: "",
     email: "",
@@ -20,6 +22,7 @@ function AddUser() {
     try {
       await createUser(user);
       alert("User added successfully");
+      navigate("/users");
     } catch (error) {
       console.error("Could not add user:", error);
       alert("Could not add user. Check the API and try again.");
