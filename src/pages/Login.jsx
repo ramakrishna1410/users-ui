@@ -4,6 +4,9 @@ import axios from "axios";
 
 function Login() {
 
+    const API_BASE_URL =
+  import.meta.env.VITE_API_BASE_URL;
+    
     const navigate = useNavigate();
 
     const [loginData, setLoginData] = useState({
@@ -27,7 +30,7 @@ function Login() {
         try {
 
             const response = await axios.post(
-                "https://localhost:7268/api/auth/login",
+               `${API_BASE_URL}/api/auth/login`,
                 loginData
             );
 

@@ -1,6 +1,10 @@
 import axios from "axios";
 
-const API_URL = "https://localhost:7268/api/users";
+const API_BASE_URL =
+  import.meta.env.VITE_API_BASE_URL;
+
+  const API_URL =
+  `${API_BASE_URL}/api/employees`;
 
 const getHeaders = () => {
 
